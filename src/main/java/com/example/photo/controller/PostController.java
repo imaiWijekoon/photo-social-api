@@ -5,7 +5,6 @@ import com.example.photo.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -16,7 +15,7 @@ public class PostController {
     @Autowired
     private PostService postService;
 
-    // Create a new post
+    // Create a new posts
     @PostMapping
     public ResponseEntity<Post> createPost(@RequestBody Post post) {
         Post createdPost = postService.createPost(post);
@@ -30,13 +29,14 @@ public class PostController {
         return ResponseEntity.ok(posts);
     }
 
-    // Get a single post by ID
+    // Get a single post by Id
     @GetMapping("/{postId}")
     public ResponseEntity<Post> getPostById(@PathVariable String postId) {
         Post post = postService.getPostById(postId);
         return ResponseEntity.ok(post);
     }
 
+    
     // Update a post
     @PutMapping("/{postId}")
     public ResponseEntity<Post> updatePost(@PathVariable String postId, @RequestBody Post updatedPost) {
@@ -58,7 +58,7 @@ public class PostController {
         return ResponseEntity.ok(posts);
     }
 
-    // Add a comment to a post
+    // Add a comments to a post
     @PostMapping("/{postId}/comments")
     public ResponseEntity<Post> addComment(@PathVariable String postId, @RequestParam String username, @RequestParam String text) {
         Post post = postService.addComment(postId, username, text);
@@ -79,7 +79,7 @@ public class PostController {
         return ResponseEntity.ok(post);
     }
 
-    // Get all posts for a specific group
+    // Get all posts for specific group
     @GetMapping("/group/{groupId}")
     public ResponseEntity<List<Post>> getPostsByGroupId(@PathVariable String groupId) {
         List<Post> posts = postService.getPostsByGroupId(groupId);
