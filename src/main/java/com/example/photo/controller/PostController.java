@@ -58,7 +58,7 @@ public class PostController {
         return ResponseEntity.ok(posts);
     }
 
-    // Add a comment to a post
+    // Add a comments to a post
     @PostMapping("/{postId}/comments")
     public ResponseEntity<Post> addComment(@PathVariable String postId, @RequestParam String username, @RequestParam String text) {
         Post post = postService.addComment(postId, username, text);
