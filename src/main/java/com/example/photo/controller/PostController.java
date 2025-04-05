@@ -16,7 +16,7 @@ public class PostController {
     @Autowired
     private PostService postService;
 
-    // Create a new post
+    // Create a new posts
     @PostMapping
     public ResponseEntity<Post> createPost(@RequestBody Post post) {
         Post createdPost = postService.createPost(post);
