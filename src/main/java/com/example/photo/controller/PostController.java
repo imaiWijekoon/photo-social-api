@@ -30,7 +30,7 @@ public class PostController {
         return ResponseEntity.ok(posts);
     }
 
-    // Get a single post by ID
+    // Get a single post by Id
     @GetMapping("/{postId}")
     public ResponseEntity<Post> getPostById(@PathVariable String postId) {
         Post post = postService.getPostById(postId);
