@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 @Document(collection = "posts") // Maps this class to the "posts" collection in MongoDB
 public class Post {
-    @Id // Marks this field as the primary key
+    @Id //Marks this field as the primary key
     private String id;
 
     private String title;
