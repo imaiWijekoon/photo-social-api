@@ -35,7 +35,7 @@ public class Post {
     public static class Comment {
         private String username; // Username of the commenter
         private String text; // Comment text
-        private Date createdAt; // Time stamp for when the comment was created
+        private Date createdAt;  // Time stamp for when the comment was created
 
         public Comment(String username, String text) {
             this.username = username;
