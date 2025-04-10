@@ -40,16 +40,16 @@ public class Post {
         public Comment(String username, String text) {
             this.username = username;
             this.text = text;
-            this.createdAt = new Date();
+            this.createdAt=new Date();
         }
 
         // Getters and Setters
-        public String getUsername() { return username; }
-        public void setUsername(String username) { this.username = username; }
+        public String getUsername() { return username;}
+        public void setUsername(String username) { this.username = username;}
         public String getText() { return text; }
-        public void setText(String text) { this.text = text; }
+        public void setText(String text) { this.text = text;}
         public Date getCreatedAt() { return createdAt; }
-        public void setCreatedAt(Date createdAt) { this.createdAt = createdAt; }
+        public void setCreatedAt(Date createdAt) { this.createdAt = createdAt;}
 }
 
 // Inner class for comments
