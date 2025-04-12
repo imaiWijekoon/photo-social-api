@@ -15,7 +15,7 @@ public class Post {
     private String id;
     private String title;
     private String description; // add post description
-    private String userId;
+    private String userId; // user id 
     private String imageUrl; //URL or path to the image
     private String author; // Username of the post creator
     private Date createdAt; // Timestamp for when the post was created
