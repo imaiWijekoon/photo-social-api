@@ -27,7 +27,7 @@ public class Post {
     private Article article;
 
     public Post() {
-        this.createdAt = new Date(); // Automatically set the creation timestamp
+        this.createdAt = new Date(); // Automatically set creation timestamp
     }
 
 
