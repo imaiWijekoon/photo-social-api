@@ -14,7 +14,7 @@ public class Post {
     @Id //Marks this field as the primary key
     private String id;
     private String title;
-    private String description;
+    private String description; // add post description
     private String userId;
     private String imageUrl; //URL or path to the image
     private String author; // Username of the post creator
@@ -36,7 +36,7 @@ public class Post {
         private String text; // Comment text
         private Date createdAt;  // Time stamp for when the comment was created
 
-        
+
         public Comment(String username, String text) {
             this.username = username;
             this.text = text;
