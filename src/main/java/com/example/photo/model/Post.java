@@ -13,7 +13,6 @@ import java.util.List;
 public class Post {
     @Id //Marks this field as the primary key
     private String id;
-
     private String title;
     private String description;
     private String userId;
@@ -37,6 +36,7 @@ public class Post {
         private String text; // Comment text
         private Date createdAt;  // Time stamp for when the comment was created
 
+        
         public Comment(String username, String text) {
             this.username = username;
             this.text = text;
