@@ -79,7 +79,7 @@ public class PostController {
         return ResponseEntity.ok(post);
     }
 
-    // Get all posts for a specific group
+    // Get all posts for specific group
     @GetMapping("/group/{groupId}")
     public ResponseEntity<List<Post>> getPostsByGroupId(@PathVariable String groupId) {
         List<Post> posts = postService.getPostsByGroupId(groupId);
