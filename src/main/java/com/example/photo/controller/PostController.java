@@ -36,6 +36,7 @@ public class PostController {
         return ResponseEntity.ok(post);
     }
 
+    
     // Update a post
     @PutMapping("/{postId}")
     public ResponseEntity<Post> updatePost(@PathVariable String postId, @RequestBody Post updatedPost) {
