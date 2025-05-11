@@ -15,6 +15,7 @@ public class MessageService {
     @Autowired
     private MessageRepository messageRepository;
 
+   
     // Create a new message
     public Message createMessage(String username, String text) {
         String messageId = UUID.randomUUID().toString(); // Generate a unique ID
